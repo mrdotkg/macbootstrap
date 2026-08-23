@@ -1,4 +1,4 @@
-# MBP Post-Install Bootstrap (OCLP Sequoia)
+# Early 2015 MBP running OCLP macOS Sequoia, Post-Install Bootstrap
 
 ## Usage
 ```bash
