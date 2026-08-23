@@ -1,0 +1,42 @@
+# .zshrc — Mac side, mirrors the tool choices already running on your WSL box
+
+# Homebrew (Apple Silicon path; harmless no-op if you're on Intel and it's
+# already in PATH some other way)
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# --- Prompt / navigation ---
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
+# --- fzf keybindings + fuzzy completion (installed by bootstrap.sh) ---
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# --- ls replacement ---
+alias ls='eza --icons --group-directories-first'
+alias ll='eza -l --icons --git --group-directories-first'
+alias la='eza -la --icons --group-directories-first'
+alias lt='eza --tree --icons --level=2'
+
+# --- cat / man replacement ---
+alias cat='bat --paging=never'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# --- git ---
+alias lg='lazygit'
+
+# --- yazi: cd the shell to wherever you navigated to on exit ---
+function y() {
+  local tmp
+  tmp="$(mktemp -t yazi-cwd.XXXXXX)"
+  yazi "$@" --cwd-file="$tmp"
+  local cwd
+  cwd="$(cat -- "$tmp")"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && cd -- "$cwd"
+  rm -f -- "$tmp"
+}
+
+# --- quick SSH into the PC/WSL box, dropping into a persistent tmux session ---
+# Replace USER@HOST once you know it — keeps the Mac genuinely thin-client.
+alias devbox='ssh -t USER@HOST "tmux new-session -A -s main"'
