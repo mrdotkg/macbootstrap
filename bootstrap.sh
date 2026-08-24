@@ -42,7 +42,7 @@ link() {
 
 mkdir -p "$HOME/.config/nvim"
 link "$DOTFILES_DIR/kitty.conf"   "$HOME/.config/kitty/kitty.conf"
-link "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
+#link "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 link "$DOTFILES_DIR/tmux.conf"   "$HOME/.tmux.conf"
 link "$DOTFILES_DIR/zshrc"       "$HOME/.zshrc"
 link "$DOTFILES_DIR/nvim-init.lua" "$HOME/.config/nvim/init.lua"
