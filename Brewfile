@@ -4,32 +4,33 @@
 
 # --- Taps ---
 tap "bjarneo/cliamp"        # cliamp isn't in homebrew-core
+tap "deskflow/tap"
 
 # --- CLI toolkit ---
 brew "bat"
-brew "ripgrep"
-brew "fzf"
-brew "zoxide"
-brew "starship"
-brew "lazygit"
-brew "neovim"
-brew "tmux"
-brew "tealdeer"
+brew "btop"
+brew "calibre"
+brew "chafa"
+brew "cliamp"
+brew "duf"
+brew "dust"
 brew "eza"
 brew "fd"
-brew "dust"
-brew "duf"
-brew "btop"
+brew "fzf"
+brew "antonmedv/fx/fx"
 brew "glow"
-brew "pandoc"
 brew "jq"
-brew "antonmedv/fx/fx"      # fx is not in homebrew-core, needs author's tap
-brew "yazi"
-brew "chafa"
+brew "kew"
+brew "lazygit"
 brew "mpv"
-brew "cliamp"
-brew "kew"                  # confirmed working directly, no extra tap needed
-brew "calibre"              # CLI-only use: ebook-convert for mobi -> epub, never launch the GUI
+brew "neovim"
+brew "pandoc"
+brew "ripgrep"
+brew "starship"
+brew "tealdeer"
+brew "tmux"
+brew "yazi"
+brew "zoxide"
 
 # --- Mac App Store CLI (mas) — scripts the three App Store installs below ---
 brew "mas"
@@ -38,7 +39,7 @@ brew "mas"
 cask "font-jetbrains-mono-nerd-font"
 
 # --- GUI apps ---
+cask "deskflow"
 cask "kitty"
-cask "barrier"
+cask "maccy"
 cask "sioyek"
-cask "maccy"                # clipboard manager
