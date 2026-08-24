@@ -47,7 +47,7 @@ link "$DOTFILES_DIR/tmux.conf"   "$HOME/.tmux.conf"
 link "$DOTFILES_DIR/zshrc"       "$HOME/.zshrc"
 link "$DOTFILES_DIR/nvim-init.lua" "$HOME/.config/nvim/init.lua"
 
-# tmux plugin manager (TPM), matching your existing WSL tmux setup
+# tmux plugin manager (TPM)
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
   echo "    TPM cloned — inside tmux, press prefix + I to install plugins"
