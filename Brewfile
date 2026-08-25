@@ -3,13 +3,12 @@
 #   brew bundle dump --force --file=./Brewfile.snapshot
 
 # --- Taps ---
-tap "bjarneo/cliamp"        # cliamp isn't in homebrew-core
-tap "deskflow/tap"
+tap "bjarneo/cliamp", trusted: true
+tap "deskflow/tap", trusted: true
 
 # --- CLI toolkit ---
 brew "bat"
 brew "btop"
-brew "calibre"
 brew "chafa"
 brew "cliamp"
 brew "duf"
@@ -17,7 +16,7 @@ brew "dust"
 brew "eza"
 brew "fd"
 brew "fzf"
-brew "antonmedv/fx/fx"
+brew "fx"
 brew "glow"
 brew "jq"
 brew "kew"
@@ -26,7 +25,6 @@ brew "mpv"
 brew "neovim"
 brew "pandoc"
 brew "ripgrep"
-brew "starship"
 brew "tealdeer"
 brew "tmux"
 brew "yazi"
