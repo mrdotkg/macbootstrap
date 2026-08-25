@@ -9,12 +9,6 @@ if ! command -v mas >/dev/null 2>&1; then
   exit 1
 fi
 
-if ! mas account >/dev/null 2>&1; then
-  echo "Not signed into the App Store. Opening it now — sign in, then re-run this script."
-  open -a "App Store"
-  exit 1
-fi
-
 # App IDs verified against the current App Store listings (Aug 2026):
 mas install 6745342698   # uBlock Origin Lite (Raymond Hill)
 mas install 1160374471   # PiPifier (Mac version — native Safari extension)
