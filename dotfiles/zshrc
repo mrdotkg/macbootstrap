@@ -7,7 +7,6 @@ if [ -x /opt/homebrew/bin/brew ]; then
 fi
 
 # --- Prompt / navigation ---
-eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 # --- fzf keybindings + fuzzy completion (installed by bootstrap.sh) ---
